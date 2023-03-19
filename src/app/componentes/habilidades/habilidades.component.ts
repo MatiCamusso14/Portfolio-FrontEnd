@@ -32,6 +32,11 @@ export class HabilidadesComponent implements OnInit {
     )
   }
 
+  porcentajeDinamico(porcentaje: number) {
+    const styles = { 'width': porcentaje.toString() + '%' };
+    return styles;
+  }
+
   delete(id: number) {
     if (id != undefined) {
       this.skillS.delete(id).subscribe(

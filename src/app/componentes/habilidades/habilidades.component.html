@@ -19,7 +19,7 @@
         <div class="progress" *ngFor="let skill of skill">
           <span class="skill">{{skill.nombre}}<i class="val">{{skill.porcentaje}}</i></span>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0"
+            <div class="progress-bar" role="progressbar" [ngStyle]="porcentajeDinamico(skill.porcentaje)" aria-valuenow="75" aria-valuemin="0"
               aria-valuemax="100"></div>
           </div>
           <div>
